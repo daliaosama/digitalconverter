@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .len {
+      background-color: #00bfff;
+      color: white;
+      display: flex;
+      justify-content: center;
+      width: 600px;
+      height: 80px;
+      margin-left: 300px;
+    }
+    .weight {
+      background-color: green;
+      color: white;
+      display: flex;
+      justify-content: center;
+      width: 600px;
+      height: 80px;
+      margin-left: 300px;
+    }
+    #con {
+      background-color: green;
+      color: white;
+    }
+    .convert {
+      background-color: #dc143c;
+      color: white;
+      margin-left: 300px;
+      width: 600px;
+      justify-content: center;
+      display: flex;
+    }
+    .conv {
+      background-color: #ff8000;
+      color: white;
+      margin-left: 300px;
+      width: 600px;
+      justify-content: center;
+      display: flex;
+    }
+    
+  </style>
+  <body>
+    <div class="len"><h1>Length converter</h1></div>
+    <div class="convert">
+      <form>
+        <p>
+          Enter the length in one of the inputs and press the convert button
+        </p>
+        <label>Centimeters</label>
+        <input
+          id="inputcm"
+          type="number"
+          placeholder="cm"
+          oninput="LengthConverter(this.value)"
+          onchange="LengthConverter(this.value)"
+        />
+        <!-- <button id="con" onclick="LengthConverter(this.value)" >Convert</button> -->
+        Meters: <span id="outputMeters"></span>
+        <br />
+        <label>feet</label>
+        <input
+          id="inputFeet"
+          type="number"
+          placeholder="Feet"
+          oninput="LengthConvert(this.value)"
+          onchange="LengthConvert(this.value)"
+        />
+        Meters: <span id="output"></span><br />
+        <label for="">inches</label>
+        <input
+          id="inputInches"
+          type="number"
+          placeholder="Inches"
+          oninput="convert(this.value)"
+          onchange="convert(this.value)"
+        />
+        <!-- <button id="con">Convert</button> -->
+        Meters: <span id="output2"></span>
+        <br />
+        <label for="">kilomteres</label>
+        <input
+          id="inputKilometers"
+          type="number"
+          placeholder="Kilometers"
+          oninput="conver(this.value)"
+          onchange="conver(this.value)"
+        />
+        Meters: <span id="Meters"></span><br />
+        <label for="">Miles</label>
+        <input
+          id="inputMiles"
+          type="number"
+          placeholder="Miles"
+          oninput="con(this.value)"
+          onchange="con(this.value)"
+        />
+        Meters:<span id="Met"></span><br />
+        <label for="">yards</label>
+        <input
+          id="inputyards"
+          type="number"
+          placeholder="yards"
+          oninput="cn(this.value)"
+          onchange="cn(this.value)"
+        />
+        Meters:<span id="me"></span>
+        <br />
+        <input type="reset" value="Reset" />
+      </form>
+    </div>
+    <br />
+    <div class="weight"><h1>Weight converter</h1></div>
+    <div class="conv">
+      <form>
+        <label>Pounds</label>
+        <input
+          id="inputPounds"
+          type="number"
+          placeholder="Pounds"
+          oninput="weightConverter(this.value)"
+          onchange="weightConverter(this.value)"
+        />
+        Kilograms: <span id="outputKilograms"></span> <br />
+        <label>Grams</label>
+        <input
+          id="inputGrams"
+          type="number"
+          placeholder="Grams"
+          oninput="weightConvert(this.value)"
+          onchange="weightConvert(this.value)"
+        />
+        Kilograms: <span id="Kilograms"></span><br />
+        <label>Ounces</label>
+        <input
+          id="inputounces"
+          type="number"
+          placeholder="Ounces"
+          oninput="weightConv(this.value)"
+          onchange="weightConv(this.value)"
+        />
+        Kilograms: <span id="grams"></span>
+        <br />
+        <input type="reset" value="Reset" />
+      </form>
+    </div>
+    <br />
+   
+    <script>
+      function LengthConverter(res) {
+        //res=parseInt(document.getElementById("inputcm"))
+        document.getElementById("outputMeters").innerHTML = res / 100;
+      }
+      function LengthConvert(valNum) {
+        document.getElementById("output").innerHTML = valNum / 3.2808;
+      }
+      function convert(valNum) {
+        document.getElementById("output2").innerHTML = valNum / 39.37;
+      }
+      function conver(valNum) {
+        document.getElementById("Meters").innerHTML = valNum * 1000;
+      }
+      function con(valNum) {
+        document.getElementById("Met").innerHTML = valNum / 0.00062137;
+      }
+      function cn(valNum) {
+        document.getElementById("me").innerHTML = valNum / 1.0936;
+      }
+      function weightConverter(valNum) {
+        document.getElementById("outputKilograms").innerHTML = valNum / 2.2046;
+      }
+      function weightConvert(valNum) {
+        document.getElementById("Kilograms").innerHTML = valNum / 1000;
+      }
+      function weightConv(valNum) {
+        document.getElementById("grams").innerHTML = valNum / 35.274;
+      }
+      
+         </script>
+  </body>
+</html>
